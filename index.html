@@ -1,727 +1,509 @@
 <!DOCTYPE html>
 <html lang="pt-PT" style="scroll-behavior: smooth;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cria Sites Completos com IA | Acesso Vitalício</title>
-    <meta name="description" content="Aprende a criar sites profissionais e multipágina com Inteligência Artificial. Sem código, sem mensalidades de alojamento e com alto potencial de lucro.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cria Sites Completos com IA | Método Exclusivo</title>
+<meta name="description" content="Aprende a criar sites profissionais e multipágina com Inteligência Artificial. Sem código, sem mensalidades de alojamento e com alto potencial de lucro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+<style>
+/* --- CSS: HIGH CONVERSION DARK MODE (META ADS FOCUS) --- */
+:root {
+--primary: #00E676; 
+--primary-dark: #00C853;
+--primary-glow: rgba(0, 230, 118, 0.5);
+--bg-dark: #050505;
+--bg-card: #0F0F0F;
+--text-main: #ffffff;
+--text-muted: #a1a1aa;
+--gradient-btn: linear-gradient(135deg, #00E676 0%, #00C853 100%);
+--urgency-red: #ff3b30;
+--gold: #FFD700;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; }
+.text-center { text-align: center; }
+.highlight { color: var(--primary); }
+.alert-text { color: var(--urgency-red); font-weight: 800; }
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; line-height: 1.2; }
 
-    <style>
-        /* --- CSS: PREMIUM DARK MODE V11.0 (CONVERSÃO MÁXIMA) --- */
-        :root {
-            --primary: #00E676; 
-            --primary-dark: #00C853;
-            --primary-glow: rgba(0, 230, 118, 0.4);
-            --bg-dark: #050505;
-            --bg-card: #0F0F0F;
-            --text-main: #ffffff;
-            --text-muted: #a1a1aa;
-            --gradient-btn: linear-gradient(135deg, #00E676 0%, #00C853 100%);
-            --urgency-red: #ff4757;
-            --gold: #FFD700;
-        }
+/* Backgrounds & Banners */
+.bg-glow-top { position: absolute; width: 100%; height: 600px; background: radial-gradient(circle at top, rgba(0,230,118,0.15) 0%, rgba(0,0,0,0) 60%); z-index: -1; pointer-events: none; }
+.top-banner { background: var(--urgency-red); color: #fff; text-align: center; padding: 12px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3); animation: pulse-banner 2s infinite; }
+@keyframes pulse-banner { 0% { background: #ff3b30; } 50% { background: #d32f2f; } 100% { background: #ff3b30; } }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            background-color: var(--bg-dark); 
-            color: var(--text-main); 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            overflow-x: hidden;
-        }
+/* Hero Section */
+.hero { padding: 60px 0 50px 0; text-align: center; }
+.pre-headline { color: var(--gold); font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+.badge { display: inline-block; padding: 8px 20px; border-radius: 50px; background: rgba(0, 230, 118, 0.1); color: var(--primary); font-size: 0.9rem; font-weight: 700; border: 1px solid rgba(0, 230, 118, 0.3); margin-bottom: 24px; box-shadow: 0 0 20px rgba(0,230,118,0.1); }
+.hero h1 { font-size: clamp(2.8rem, 6vw, 4rem); margin-bottom: 24px; font-weight: 900; }
+.hero p { font-size: 1.2rem; color: #ddd; max-width: 800px; margin: 0 auto 30px; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; }
-        .text-center { text-align: center; }
-        .highlight { color: var(--primary); }
-        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
-        
-        .bg-glow-top {
-            position: absolute;
-            width: 100%; height: 500px;
-            background: radial-gradient(circle at top, rgba(0,230,118,0.12) 0%, rgba(0,0,0,0) 60%);
-            z-index: -1; pointer-events: none;
-        }
+/* Triggers & Math */
+.profit-math { background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 25px; display: flex; justify-content: space-around; max-width: 900px; margin: 0 auto 40px; flex-wrap: wrap; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.math-item { text-align: center; flex: 1; min-width: 150px; }
+.math-item span { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-bottom: 5px; }
+.math-item strong { font-size: 1.6rem; color: var(--primary); font-weight: 900; }
 
-        .top-banner {
-            background: linear-gradient(90deg, #10b981, #059669);
-            color: #fff; text-align: center; padding: 10px;
-            font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.5px; position: sticky; top: 0; z-index: 1000;
-        }
+/* Botões CTA Fortes */
+.btn-cta { background: var(--gradient-btn); color: #000; padding: 22px 40px; font-size: 1.3rem; font-weight: 900; text-decoration: none; border-radius: 12px; display: inline-block; box-shadow: 0 0 0 4px rgba(0, 230, 118, 0.2); transition: all 0.3s ease; text-transform: uppercase; border: none; cursor: pointer; width: 100%; max-width: 500px; animation: pulse-green 2s infinite; position: relative; overflow: hidden; }
+.btn-cta::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%); transform: rotate(45deg); animation: shine 3s infinite; }
+@keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
+.btn-cta:hover { transform: scale(1.02); box-shadow: 0 15px 40px rgba(0, 230, 118, 0.5); }
+@keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); } }
+.micro-copy { margin-top: 10px; font-size: 0.85rem; color: #aaa; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
-        .hero { padding: 80px 0 60px 0; text-align: center; }
-        
-        .badge {
-            display: inline-block; padding: 6px 16px; border-radius: 50px;
-            background: rgba(0, 230, 118, 0.1); color: var(--primary);
-            font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(0, 230, 118, 0.2);
-            margin-bottom: 24px;
-        }
+/* Agitation Section (Inimigo Comum) */
+.agitation-box { background: rgba(255, 59, 48, 0.05); border: 1px dashed rgba(255, 59, 48, 0.3); border-radius: 16px; padding: 30px; max-width: 800px; margin: 40px auto; text-align: left; }
+.agitation-box h3 { color: #fff; font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+.agitation-list { list-style: none; }
+.agitation-list li { color: #ddd; margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start; }
+.agitation-list li::before { content: '❌'; font-size: 1rem; }
 
-        .hero h1 { 
-            font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; font-weight: 900;
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
+/* Vídeo VSL com Falso Play (Alta Conversão) */
+.video-section { padding: 20px 0 60px 0; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; max-width: 850px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 230, 118, 0.2); border: 2px solid var(--primary); background: #111; cursor: pointer; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 1; }
+.video-overlay { position: absolute; inset: 0; background: url('https://img.youtube.com/vi/w-BooQsuQzY/maxresdefault.jpg') center/cover; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.video-overlay::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.play-btn { position: relative; width: 80px; height: 80px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 3; animation: pulse-green 2s infinite; transition: 0.3s; }
+.play-btn::after { content: ''; border-style: solid; border-width: 15px 0 15px 25px; border-color: transparent transparent transparent #000; margin-left: 5px; }
+.video-overlay:hover .play-btn { transform: scale(1.1); }
+.privacy-note { position: relative; z-index: 3; color: #fff; margin-top: 15px; font-size: 0.85rem; background: rgba(0,0,0,0.8); padding: 5px 15px; border-radius: 20px; border: 1px solid #333; }
 
-        .hero p { 
-            font-size: 1.25rem; color: var(--text-muted); max-width: 750px; margin: 0 auto 40px;
-        }
+/* Projetos & Social Proof */
+.section-projects { padding: 80px 0; background: #0a0a0a; border-top: 1px solid #222; }
+.grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
+.project-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,230,118,0.15); }
+.project-img-wrapper { height: 220px; width: 100%; background: #1a1a1a; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; position: relative; }
+.project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.5s; }
+.project-card:hover img { transform: scale(1.05); }
+.project-info { padding: 24px; }
+.project-stats { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; margin-top: 15px; }
+.stat-value { color: var(--primary); font-weight: 900; display: block; font-size: 1.2rem; }
 
-        .profit-math {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .math-item { text-align: center; }
-        .math-item span { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
-        .math-item strong { font-size: 1.5rem; color: var(--primary); }
+/* Testemunhos Premium */
+.testimonials { padding: 60px 24px; border-top: 1px solid #222; margin-top: 40px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1100px; margin: 40px auto 0; }
+.test-card { background: linear-gradient(145deg, #111, #0a0a0a); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; }
+.stars { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; letter-spacing: 2px; }
+.test-text { font-style: italic; color: #ddd; margin-bottom: 25px; font-size: 1rem; line-height: 1.6; }
+.test-author { display: flex; align-items: center; gap: 15px; border-top: 1px solid #222; padding-top: 15px; }
+.test-avatar { width: 50px; height: 50px; border-radius: 50%; background: rgba(0,230,118,0.1); border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary); }
 
-        .btn-cta {
-            background: var(--gradient-btn); color: #000;
-            padding: 22px 40px; font-size: 1.2rem; font-weight: 800;
-            text-decoration: none; border-radius: 12px; display: inline-block;
-            box-shadow: 0 0 0 4px rgba(0, 230, 118, 0.2);
-            transition: all 0.3s ease; text-transform: uppercase;
-            border: none; cursor: pointer; width: 100%; max-width: 450px;
-            animation: pulse-green 2s infinite;
-        }
-        .btn-cta:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(0, 230, 118, 0.4); }
+/* Oferta Irresistível */
+.offer-box { background: radial-gradient(circle at center, #151515 0%, #050505 100%); border: 2px solid var(--primary); box-shadow: 0 0 50px rgba(0,230,118,0.15); border-radius: 24px; padding: 50px; margin: 40px auto 0; max-width: 800px; position: relative; }
+.tag-desconto { position: absolute; top: -20px; right: 30px; background: var(--urgency-red); color: #fff; font-weight: 900; padding: 10px 20px; border-radius: 50px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(255,59,48,0.4); }
+.value-stack { background: rgba(255,255,255,0.02); border-radius: 12px; padding: 24px; margin: 30px 0; border: 1px dashed rgba(255,255,255,0.1); }
+.value-item { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 1.05rem; color: #ddd; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; }
+.value-item:last-of-type { border-bottom: 2px solid #333; padding-bottom: 14px; }
+.value-total { display: flex; justify-content: space-between; margin-top: 15px; font-size: 1.2rem; color: var(--text-muted); align-items: center; font-weight: bold; }
+.strike-price { text-decoration: line-through; color: var(--urgency-red); font-weight: 900; font-size: 1.4rem; }
+.price-display { margin: 25px 0 35px 0; }
+.price-new { font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; text-shadow: 0 0 20px rgba(0,230,118,0.3); }
 
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
-        }
+/* Garantia */
+.guarantee-box { display: flex; align-items: center; gap: 20px; margin-top: 30px; padding: 20px; background: rgba(0, 230, 118, 0.05); border: 1px dashed var(--primary); border-radius: 16px; text-align: left; }
+.guarantee-icon { font-size: 3rem; line-height: 1; }
 
-        /* --- VIDEO WRAPPER + CONSENT PLACEHOLDER --- */
-        .video-section { padding: 40px 0 80px 0; background: #050505; }
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 230, 118, 0.15);
-            border: 1px solid rgba(0, 230, 118, 0.3);
-            background: #000;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+details { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+details[open] { border-color: var(--primary); background: rgba(0,230,118,0.05); }
+summary { padding: 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; font-size: 1.1rem; }
+summary::after { content: '+'; color: var(--primary); font-size: 1.5rem; font-weight: bold; }
+details[open] summary::after { content: '-'; }
+.faq-text { padding: 0 20px 20px; color: var(--text-muted); line-height: 1.6; font-size: 1rem; }
 
-        .video-consent {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(0,230,118,0.12) 0%, rgba(0,0,0,0.85) 60%);
-            color: #fff;
-        }
-        .video-consent-inner {
-            max-width: 520px;
-            background: rgba(15,15,15,0.75);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 14px;
-            padding: 22px;
-            backdrop-filter: blur(6px);
-        }
-        .video-consent-inner h3 { font-size: 1.15rem; margin-bottom: 10px; }
-        .video-consent-inner p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px; }
-        .btn-secondary {
-            display: inline-block; padding: 12px 16px; border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.18); color: #fff; text-decoration: none;
-            cursor: pointer; background: rgba(255,255,255,0.06); transition: 0.25s; font-weight: 700;
-        }
-        .btn-secondary:hover { transform: translateY(-2px); border-color: rgba(0,230,118,0.5); }
+footer { border-top: 1px solid #222; padding: 40px 0; margin-top: 60px; font-size: 0.9rem; color: #666; }
+footer a { color: #888; text-decoration: none; margin: 0 10px; transition: 0.3s; }
 
-        .section-projects { padding: 80px 0; background: #0a0a0a; border-top: 1px solid #222; }
-        .grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .project-img-wrapper { height: 220px; width: 100%; background: #1a1a1a; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; }
-        .project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .project-info { padding: 24px; }
-        .project-title { color: #fff; margin-bottom: 12px; font-size: 1.2rem; }
-        .project-stats { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); }
-        .stat-value { color: var(--primary); font-weight: bold; display: block; font-size: 1.1rem; }
+/* WhatsApp Flutuante */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 20px; font-weight: bold; display: flex; align-items: center; gap: 10px; text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 1000; transition: all 0.3s ease; }
+.whatsapp-float:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
 
-        .author-box { background: rgba(0, 230, 118, 0.05); border: 1px solid rgba(0, 230, 118, 0.2); border-radius: 16px; padding: 40px; margin: 60px auto; max-width: 800px; display: flex; align-items: center; gap: 30px; }
-        .author-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); background: #222; }
-        .author-text h3 { color: #fff; margin-bottom: 10px; font-size: 1.5rem; }
-        .author-text p { color: var(--text-muted); line-height: 1.6; font-size: 1.05rem; }
-        
-        .testimonials { padding: 60px 24px; border-top: 1px solid #222; margin-top: 40px; }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 40px auto 0; }
-        .test-card { background: #111; padding: 30px; border-radius: 12px; border: 1px solid #222; position: relative; }
-        .stars { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
-        .test-text { font-style: italic; color: #ddd; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; }
-        .test-author { display: flex; align-items: center; gap: 15px; }
-        .test-avatar { width: 45px; height: 45px; border-radius: 50%; background: #333; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary); }
-        .test-name { font-weight: 600; font-size: 0.9rem; color: #fff; }
-        .test-role { font-size: 0.8rem; color: var(--text-muted); }
-
-        .fit-section { padding: 70px 0; border-top: 1px solid #222; background: #050505; }
-        .fit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 28px; }
-        .fit-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; }
-        .fit-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
-        .fit-card ul { list-style: none; margin-top: 12px; }
-        .fit-card li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: #ddd; }
-        .fit-card li:last-child { border-bottom: none; }
-        .fit-icon { min-width: 18px; font-weight: 900; }
-        .fit-yes .fit-icon { color: var(--primary); }
-        .fit-no .fit-icon { color: var(--urgency-red); }
-
-        .urgency-block { background: rgba(255, 71, 87, 0.05); border: 1px solid rgba(255, 71, 87, 0.25); border-radius: 16px; padding: 40px 30px; margin: 60px auto 0; max-width: 850px; text-align: center; box-shadow: 0 10px 40px rgba(255, 71, 87, 0.08); }
-        .urgency-block h2 { font-size: 1.7rem; line-height: 1.4; color: #fff; }
-        .urgency-block p { font-size: 1.2rem; margin-top: 20px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-
-        .value-stack { background: rgba(255,255,255,0.02); border-radius: 12px; padding: 24px; margin: 30px 0; border: 1px dashed rgba(255,255,255,0.1); }
-        .value-item { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 1rem; color: #ddd; align-items: center; }
-        .value-item:last-of-type { border-bottom: 1px solid #333; padding-bottom: 14px; }
-        .value-total { display: flex; justify-content: space-between; margin-top: 14px; font-size: 1.1rem; color: var(--text-muted); align-items: center; }
-        .strike-price { text-decoration: line-through; color: var(--urgency-red); font-weight: bold; font-size: 1.2rem; }
-
-        .offer-box { background: radial-gradient(circle at center, #151515 0%, #050505 100%); border: 1px solid var(--primary); box-shadow: 0 0 50px rgba(0,230,118,0.1); border-radius: 24px; padding: 40px; margin: 40px auto 0; max-width: 750px; }
-        .update-box { background: rgba(255, 215, 0, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 16px; border-radius: 12px; margin-bottom: 25px; text-align: left; display: flex; gap: 15px; align-items: center; }
-        .pulse-dot { min-width: 12px; height: 12px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 rgba(255, 215, 0, 0.4); animation: pulse-gold 2s infinite; }
-        
-        .check-list { list-style: none; margin: 30px 0; }
-        .check-list li { margin-bottom: 15px; font-size: 1.05rem; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; text-align: left; }
-        .check-icon { color: var(--primary); min-width: 20px; font-weight: bold; }
-
-        .price-display { margin: 20px 0 30px 0; }
-        .price-new { font-size: 4rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
-        .price-sub { font-size: 0.9rem; color: var(--text-muted); margin-top: 5px; }
-
-        details { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
-        details[open] { border-color: var(--primary); background: rgba(0,230,118,0.05); }
-        summary { padding: 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
-        summary::after { content: '+'; color: var(--primary); font-size: 1.5rem; }
-        details[open] summary::after { content: '-'; }
-        .faq-text { padding: 0 20px 20px; color: var(--text-muted); line-height: 1.6; }
-
-        footer { border-top: 1px solid #222; padding: 40px 0; margin-top: 60px; font-size: 0.9rem; color: #666; }
-        footer a { color: #888; text-decoration: none; margin: 0 10px; transition: 0.3s; }
-
-        #cookie-banner { position: fixed; bottom: 20px; left: 20px; max-width: 360px; background: #111; border: 1px solid #333; padding: 18px; border-radius: 12px; z-index: 9999; box-shadow: 0 10px 40px rgba(0,0,0,0.8); display: none; }
-        .cookie-links { margin-top: 10px; font-size: 0.8rem; color: #888; }
-        .cookie-links a { color: #9ca3af; text-decoration: none; }
-
-        /* --- WHATSAPP FLUTUANTE (NOVO) --- */
-        .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px;
-            background-color: #25d366; color: white; border-radius: 50px;
-            padding: 12px 20px; font-weight: bold; display: flex; align-items: center; gap: 10px;
-            text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000; transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .price-new { font-size: 3rem; }
-            .offer-box { padding: 24px; }
-            .grid-projects { grid-template-columns: 1fr; }
-            .profit-math { flex-direction: column; align-items: center; }
-            .video-wrapper { margin: 0 -10px; border-radius: 8px; }
-            .author-box { flex-direction: column; text-align: center; padding: 30px 20px; }
-            .top-banner { position: relative; }
-            .urgency-block h2 { font-size: 1.3rem; }
-            #cookie-banner { bottom: 85px; } /* Evita sobrepor o botão do Whats */
-        }
-    </style>
+@media (max-width: 768px) {
+.hero h1 { font-size: 2.3rem; }
+.price-new { font-size: 3.5rem; }
+.offer-box { padding: 30px 20px; margin-top: 20px; }
+.tag-desconto { position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 20px; }
+.grid-projects { grid-template-columns: 1fr; }
+.profit-math { flex-direction: column; align-items: center; gap: 30px; }
+.video-wrapper { margin: 0; border-radius: 8px; }
+.guarantee-box { flex-direction: column; text-align: center; }
+.whatsapp-float span { display: none; }
+.whatsapp-float { padding: 15px; border-radius: 50%; }
+}
+</style>
 </head>
 <body>
+<div class="bg-glow-top"></div>
 
-    <div class="bg-glow-top"></div>
+<div class="top-banner">
+⚠️ ATENÇÃO: As inscrições com desconto e bónus encerram dia <span id="dynamic-date"></span>
+</div>
 
-    <div class="top-banner">
-        🔥 Lote de Lançamento: Acesso Vitalício por 49,90€ — até <span id="dynamic-date">28/02/2026</span>
-    </div>
+<header class="hero container">
+<span class="pre-headline">O Método Validado em 2026</span>
+<span class="badge">🚀 Sem Código. Sem Mensalidades.</span>
+<h1 class="text-gradient">
+Cria Sites Profissionais<br>
+<span class="highlight">em Minutos com IA</span>
+</h1>
+<p>
+Aprende a gerar a estrutura, o texto e o design de sites multipágina usando apenas Inteligência Artificial. <strong>Cria para a tua empresa ou vende a clientes locais por 500€+.</strong>
+</p>
 
-    <header class="hero container">
-        <span class="badge">🚀 Tecnologia IA de Ponta 2026</span>
-        
-        <h1 class="text-gradient">
-            Cria Sites Completos e<br>
-            <span class="highlight">Profissionais com IA</span>
-        </h1>
-        
-        <p>
-            O método prático para construíres sites multipágina (Home, Sobre, Serviços, Contactos) sem escreveres uma única linha de código. 
-            <strong>Cria para o teu negócio ou vende a clientes por 500€+.</strong>
-        </p>
+<div class="agitation-box">
+<h3>Porquê continuar a perder dinheiro?</h3>
+<ul class="agitation-list">
+<li>Pagar 1.500€ a agências por sites simples que demoram meses.</li>
+<li>Pagar 20€/mês de alojamento para sempre no Wix ou WordPress.</li>
+<li>Perder semanas a tentar aprender a programar do zero.</li>
+</ul>
+<p style="margin-top: 15px; color: var(--primary); font-weight: bold;">✅ Com o Método IA Pro: Tu és o Arquiteto. A IA escreve o código. O Alojamento é Gratuito.</p>
+</div>
 
-        <div class="profit-math">
-            <div class="math-item"><span>Mensalidade de Alojamento</span><strong>0,00€</strong></div>
-            <div class="math-item"><span>Estrutura</span><strong>Multipágina</strong></div>
-            <div class="math-item"><span>Design & Estética</span><strong>Premium</strong></div>
-            <div class="math-item"><span>Configuração</span><strong>Zero Código</strong></div>
-        </div>
+<div class="profit-math">
+<div class="math-item"><span>Custo de Alojamento</span><strong>0,00€</strong></div>
+<div class="math-item"><span>Potencial de Venda</span><strong>500€ a 1000€</strong></div>
+<div class="math-item"><span>Nível Exigido</span><strong>Iniciante</strong></div>
+</div>
 
-        <div>
-            <a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" 
-               onclick="trackInitiateCheckout('Botao Hero'); return false;" 
-               class="btn-cta hotmart-fb">
-                Garantir o Meu Acesso Imediato
-            </a>
-            
-            <div style="margin-top: 15px; font-size: 0.95rem; color: #FFD700; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
-            <p style="margin-top: 5px; font-size: 0.95rem; color: #fff; font-weight: 500;">Mais de 300+ alunos já criaram os seus sites</p>
-            
-            <p style="margin-top: 8px; font-size: 0.78rem; color: #666;">*O valor de revenda depende dos clientes angariados na tua região.</p>
-        </div>
-    </header>
+<div>
+<a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" onclick="trackInitiateCheckout('Botao Hero'); return false;" class="btn-cta hotmart-fb">
+QUERO ACEDER AO MÉTODO AGORA 👉
+</a>
+<div class="micro-copy">🔒 Pagamento 100% Seguro • Acesso Imediato no E-mail</div>
+<div style="margin-top: 15px; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+<p style="margin-top: 5px; font-size: 0.95rem; color: #fff; font-weight: 500;">Junta-te a mais de 300+ alunos hoje.</p>
+</div>
+</header>
 
-    <section class="video-section container">
-        <h2 class="text-center" style="margin-bottom: 30px; font-size: 1.8rem;">
-            Vê como a IA constrói um site <span style="color: var(--primary);">(Apenas 2 minutos)</span> 👇
-        </h2>
+<section class="video-section container">
+<h2 class="text-center" style="margin-bottom: 20px; font-size: 2rem;">
+Vê a IA a trabalhar por ti <span style="color: var(--primary);">(Demonstração)</span> 👇
+</h2>
+<p class="text-center" style="color: var(--text-muted); margin-bottom: 30px;">Clica no play para veres um site a ser gerado do zero em tempo real.</p>
 
-        <div class="video-wrapper" id="videoWrapper">
-            <div class="video-consent" id="videoConsent">
-                <div class="video-consent-inner">
-                    <h3>Vídeo bloqueado por privacidade 🍪</h3>
-                    <p>Para veres o vídeo, precisamos do teu consentimento para carregar conteúdo do YouTube e medir desempenho.</p>
-                    <button class="btn-secondary" onclick="openCookieBanner()">Aceitar cookies e ver vídeo</button>
-                    <div style="margin-top: 10px; font-size: 0.8rem; color: #888;">
-                        Podes recusar — o curso continua disponível.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="video-wrapper" id="videoWrapper" onclick="loadYouTubeVideo()">
+<div class="video-overlay" id="videoConsent">
+<div class="play-btn"></div>
+<div class="privacy-note">Ao clicares, aceitas os cookies do YouTube para reprodução.</div>
+</div>
+</div>
+</section>
 
-    <section class="section-projects">
-        <div class="container">
-            <h2 class="text-center">Vê o potencial do que vais aprender a criar:</h2>
-            <div class="grid-projects">
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img loading="lazy" width="1200" height="800" src="barberia.png" alt="Site Barbearia">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Site Completo: Barbearia</h3>
-                        <div class="project-stats">
-                            <div>Estrutura:<br><span class="stat-value">5 Páginas</span></div>
-                            <div style="text-align: right;">Potencial de Venda:<br><span class="stat-value">500€</span></div>
-                        </div>
-                    </div>
-                </div>
+<section class="section-projects">
+<div class="container">
+<h2 class="text-center">Vê exatamente o que vais ser capaz de criar:</h2>
+<div class="grid-projects">
+<div class="project-card">
+<div class="project-img-wrapper">
+<img loading="lazy" width="1200" height="800" src="barberia.png" alt="Site Barbearia">
+</div>
+<div class="project-info">
+<h3 class="project-title">Site Completo: Barbearia</h3>
+<p style="color: #aaa; font-size: 0.9rem;">Estrutura ideal para captação de clientes locais.</p>
+<div class="project-stats">
+<div>Estrutura:<br><span style="color:#fff;">5 Páginas</span></div>
+<div style="text-align: right;">Preço de Venda:<br><span class="stat-value">500€</span></div>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-img-wrapper">
+<img loading="lazy" width="1200" height="800" src="hamburguesa.png" alt="Site Restaurante">
+</div>
+<div class="project-info">
+<h3 class="project-title">Site Completo: Restaurantes</h3>
+<p style="color: #aaa; font-size: 0.9rem;">Substitui ementas em PDF por menus interativos.</p>
+<div class="project-stats">
+<div>Estrutura:<br><span style="color:#fff;">Ementa Dinâmica</span></div>
+<div style="text-align: right;">Preço de Venda:<br><span class="stat-value">750€</span></div>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-img-wrapper">
+<img loading="lazy" width="1200" height="800" src="pestanas.png" alt="Site Clínica Estética">
+</div>
+<div class="project-info">
+<h3 class="project-title">Site Completo: Clínicas</h3>
+<p style="color: #aaa; font-size: 0.9rem;">Com integração de botões de WhatsApp flutuante.</p>
+<div class="project-stats">
+<div>Estrutura:<br><span style="color:#fff;">Botões CTA</span></div>
+<div style="text-align: right;">Preço de Venda:<br><span class="stat-value">800€+</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img loading="lazy" width="1200" height="800" src="hamburguesa.png" alt="Site Restaurante">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Site Completo: Restaurantes</h3>
-                        <div class="project-stats">
-                            <div>Estrutura:<br><span class="stat-value">Ementa Dinâmica</span></div>
-                            <div style="text-align: right;">Potencial de Venda:<br><span class="stat-value">750€</span></div>
-                        </div>
-                    </div>
-                </div>
+<section class="testimonials container">
+<h2 class="text-center">Resultados Reais de Pessoas Comuns:</h2>
+<div class="testimonial-grid">
+<div class="test-card">
+<div class="stars">★★★★★</div>
+<p class="test-text">"Sempre me pediram mais de 1.500€ para fazer o site do meu restaurante. Com este método da IA, criei eu mesmo as páginas da ementa, sobre nós e contactos num fim de semana. Zero mensalidades!"</p>
+<div class="test-author">
+<div class="test-avatar">JM</div>
+<div>
+<div class="test-name">João M., Porto</div>
+<div class="test-role">Dono de Restaurante</div>
+</div>
+</div>
+</div>
+<div class="test-card">
+<div class="stars">★★★★★</div>
+<p class="test-text">"Nunca escrevi uma linha de código na vida. Segui a arquitetura que o Rafael ensina e já vendi o meu primeiro site completo para uma clínica aqui na zona por 600€ na minha primeira semana."</p>
+<div class="test-author">
+<div class="test-avatar">CS</div>
+<div>
+<div class="test-name">Carla S., Lisboa</div>
+<div class="test-role">Freelancer, 38 anos</div>
+</div>
+</div>
+</div>
+<div class="test-card">
+<div class="stars">★★★★★</div>
+<p class="test-text">"O facto de a IA gerar a estrutura multipágina inteira é magia pura. Eu só tive de adaptar os textos da minha barbearia e publicar. É a habilidade mais rentável que aprendi este ano."</p>
+<div class="test-author">
+<div class="test-avatar">TF</div>
+<div>
+<div class="test-name">Tiago F., Braga</div>
+<div class="test-role">Barbeiro, 45 anos</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img loading="lazy" width="1200" height="800" src="pestanas.png" alt="Site Clínica Estética">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Site Completo: Clínicas</h3>
-                        <div class="project-stats">
-                            <div>Estrutura:<br><span class="stat-value">Sistema de Marcação</span></div>
-                            <div style="text-align: right;">Potencial de Venda:<br><span class="stat-value">800€+</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="container" style="padding: 60px 24px; background: #0a0a0a; border-radius: 16px; margin: 60px auto; border: 1px solid #222;">
+<h2 class="text-center" style="margin-bottom: 10px;">O Mapa Completo que Vais Receber</h2>
+<p class="text-center" style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
+Do zero à publicação, sem esconder nada. O passo a passo exato para dominares a nova web.
+</p>
+<div style="display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto;">
+<details>
+<summary>MÓDULO 1: O Ponto de Partida</summary>
+<div class="faq-text">
+• <strong>Aula 1:</strong> A grande diferença: Quando vender uma Landing Page vs Site Completo.<br>
+• <strong>Aula 2:</strong> A anatomia de um site profissional (Cabeçalho, Corpo, Rodapé).<br>
+• <strong>Aula 3:</strong> As ferramentas de trabalho (Navegador e Assistentes de IA).
+</div>
+</details>
+<details>
+<summary>MÓDULO 2: O Arquiteto de IA (O Segredo)</summary>
+<div class="faq-text">
+• <strong>Aula 1:</strong> O Prompt Mestre: O comando exato para criar a estrutura.<br>
+• <strong>Aula 2:</strong> Copywriting: Gerar textos persuasivos em 5 minutos.<br>
+• <strong>Aula 3:</strong> Gerando o "Esqueleto" visual (HTML/CSS): Copiar e colar sem erros.
+</div>
+</details>
+<details>
+<summary>MÓDULO 3: Alojamento 100% Gratuito</summary>
+<div class="faq-text">
+• <strong>Aula 1:</strong> Criando conta no GitHub (Para não-programadores).<br>
+• <strong>Aula 2:</strong> Subindo os ficheiros da IA para a web de forma segura.<br>
+• <strong>Aula 3:</strong> O teu site no ar com link e certificado de segurança (SSL) gratuito.
+</div>
+</details>
+<details>
+<summary>MÓDULO 4: O Motor de Vendas (Interatividade)</summary>
+<div class="faq-text">
+• <strong>Aula 1:</strong> Formulário de Contacto funcional direto para o teu e-mail.<br>
+• <strong>Aula 2:</strong> Inserir Botão flutuante de WhatsApp dinâmico.<br>
+• <strong>Aula 3:</strong> Criar links de agendamentos e mapas de localização.
+</div>
+</details>
+<details>
+<summary>MÓDULO 5: Domínio Profissional e SEO</summary>
+<div class="faq-text">
+• <strong>Aula 1:</strong> Como o Google lê o teu site gerado por IA.<br>
+• <strong>Aula 2:</strong> Comprar o teu endereço na internet (Domínios .pt, .com).<br>
+• <strong>Aula 3:</strong> Instalar Google Analytics e Pixel do Facebook.
+</div>
+</details>
+</div>
+</section>
 
-    <section class="testimonials container">
-        <h2 class="text-center">O que dizem os nossos primeiros alunos:</h2>
-        <div class="testimonial-grid">
-            <div class="test-card">
-                <div class="stars">★★★★★</div>
-                <p class="test-text">"Sempre me pediram mais de 1.500€ para fazer o site do meu restaurante. Com este método da IA, criei eu mesmo as páginas da ementa, sobre nós e contactos num fim de semana. Zero mensalidades!"</p>
-                <div class="test-author">
-                    <div class="test-avatar">JM</div>
-                    <div>
-                        <div class="test-name">João M., Porto</div>
-                        <div class="test-role">Dono de Restaurante</div>
-                    </div>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="stars">★★★★★</div>
-                <p class="test-text">"Nunca escrevi uma linha de código na vida. Segui a arquitetura que o Rafael ensina e já vendi o meu primeiro site completo para uma clínica aqui na zona por 600€."</p>
-                <div class="test-author">
-                    <div class="test-avatar">CS</div>
-                    <div>
-                        <div class="test-name">Carla S., Lisboa</div>
-                        <div class="test-role">Freelancer, 38 anos</div>
-                    </div>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="stars">★★★★★</div>
-                <p class="test-text">"O facto de a IA gerar a estrutura multipágina inteira é magia pura. Eu só tive de adaptar os textos da minha barbearia e publicar. É a melhor habilidade que aprendi este ano."</p>
-                <div class="test-author">
-                    <div class="test-avatar">TF</div>
-                    <div>
-                        <div class="test-name">Tiago F., Braga</div>
-                        <div class="test-role">Barbeiro, 45 anos</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="container" id="oferta">
+<div class="offer-box">
+<div class="tag-desconto">⚡ 85% DE DESCONTO HOJE</div>
+<h2 class="text-center" style="margin-bottom: 25px; font-size: 2.2rem;">Liberta o teu acesso agora:</h2>
 
-    <section class="container">
-        <div class="author-box">
-            <img loading="lazy" width="240" height="240" src="rafael.png" alt="Rafael Barros" class="author-img">
-            <div class="author-text">
-                <h3>Com quem vais aprender?</h3>
-                <p>Sou o <strong>Rafael Barros</strong>, Desenvolvedor Full Stack. Criei este método porque vi donos de pequenos negócios a serem explorados com orçamentos de milhares de euros por sites simples. A minha missão é entregar-te a infraestrutura para criares os teus próprios sites usando Inteligência Artificial, ou para começares a tua própria agência e faturares com clientes reais.</p>
-            </div>
-        </div>
-    </section>
+<div class="update-box" style="background: rgba(255, 215, 0, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 16px; border-radius: 12px; margin-bottom: 25px; display: flex; gap: 15px; align-items: center;">
+<div class="pulse-dot" style="min-width: 12px; height: 12px; background: var(--gold); border-radius: 50%; animation: pulse-gold 2s infinite;"></div>
+<div><strong>Material 100% Atualizado (2026)</strong><br><span style="font-size: 0.85rem;">Inclui as técnicas das IAs generativas mais recentes.</span></div>
+</div>
 
-    <section class="container" style="padding: 60px 24px; background: #0a0a0a; border-radius: 16px; margin: 60px auto; border: 1px solid #222;">
-        <h2 class="text-center" style="margin-bottom: 10px;">Conteúdo do Curso (Acesso Vitalício)</h2>
-        <p class="text-center" style="color: var(--text-muted); margin-bottom: 30px;">
-            Aprende do zero à publicação. Cria a arquitetura, gera as páginas com IA e vende como serviço.
-        </p>
+<div class="value-stack">
+<div class="value-item"><span>✅ Curso Completo: Sites com IA</span> <span>197,00€</span></div>
+<div class="value-item"><span>✅ Técnica de Alojamento Zero Custo</span> <span>47,00€</span></div>
+<div class="value-item"><span>✅ Pack de Prompts "Copia e Cola"</span> <span>39,00€</span></div>
+<div class="value-item"><span>🎁 BÓNUS: Guia "Agência de 1 Pessoa"</span> <span>97,00€</span></div>
+<div class="value-total"><span>Valor Total:</span> <span class="strike-price">380,00€</span></div>
+</div>
 
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <details>
-                <summary>MÓDULO 1: O Ponto de Partida (Alinhamento e Conceitos)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> Quem sou eu e o que vais sair daqui tendo construído.<br>
-                    • <strong>Aula 2:</strong> A grande diferença: Quando vender uma Landing Page vs Site Completo.<br>
-                    • <strong>Aula 3:</strong> A anatomia de um site profissional (Cabeçalho, Corpo, Rodapé e Páginas).<br>
-                    • <strong>Aula 4:</strong> As ferramentas de trabalho (Editor, navegador e a IA).
-                </div>
-            </details>
+<div class="text-center price-display">
+<div class="price-sub" style="font-size: 1.2rem; color: var(--primary); font-weight: bold; text-transform: uppercase;">Apenas um pagamento único de</div>
+<div class="price-new">49,90€</div>
+<div class="price-sub">Sem Mensalidades • Acesso Vitalício Imediato</div>
+</div>
 
-            <details>
-                <summary>MÓDULO 2: O Arquiteto de IA (Planeamento e Estrutura)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> O Prompt Mestre: Pedindo à IA para criar a estrutura do site.<br>
-                    • <strong>Aula 2:</strong> Gerando os textos (Copy) de todas as páginas em menos de 5 minutos.<br>
-                    • <strong>Aula 3:</strong> Gerando o "Esqueleto" visual (HTML/CSS) com IA: Copiando e colando.
-                </div>
-            </details>
+<div class="text-center">
+<a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" onclick="trackInitiateCheckout('Botao Oferta'); return false;" class="btn-cta hotmart-fb" style="width: 100%; max-width: 100%;">
+GARANTIR A MINHA VAGA AGORA 👉
+</a>
+<div class="micro-copy" style="margin-top: 15px;">Métodos Seguros: MB WAY • Multibanco • Cartão • PayPal</div>
+</div>
 
-            <details>
-                <summary>MÓDULO 3: O Alicerce Gratuito (GitHub Pages)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> Criando a tua conta no GitHub (Passo a passo para iniciantes).<br>
-                    • <strong>Aula 2:</strong> O que é o GitHub Pages e quais sites rodam lá dentro.<br>
-                    • <strong>Aula 3:</strong> Subindo os arquivos gerados pela IA para o teu repositório.<br>
-                    • <strong>Aula 4:</strong> O teu site no ar! Testando a velocidade e o link gratuito.
-                </div>
-            </details>
+<div class="guarantee-box">
+<div class="guarantee-icon">🛡️</div>
+<div>
+<h3 style="font-size: 1.3rem; margin-bottom: 5px; color: #fff;">Garantia de Risco Zero (14 Dias)</h3>
+<p style="font-size: 0.95rem; color: var(--text-muted);">Acede a todo o material. Testa os prompts e as ferramentas. Se nos próximos 14 dias achares que este método não é para ti, basta enviares um e-mail e <strong>devolvemos 100% do teu dinheiro</strong>. Sem perguntas, sem letras pequenas.</p>
+</div>
+</div>
 
-            <details>
-                <summary>MÓDULO 4: O Motor do Site (Funcionalidades Avançadas)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> Como colocar um Formulário de Contacto funcional (Sem PHP, direto no e-mail).<br>
-                    • <strong>Aula 2:</strong> O poder do JavaScript com IA: Botão flutuante de WhatsApp.<br>
-                    • <strong>Aula 3:</strong> Criando funcionalidades extras (Simuladores ou Agendamentos 100% IA).
-                </div>
-            </details>
+</div>
+</section>
 
-            <details>
-                <summary>MÓDULO 5: Os Olhos do Google (SEO e Rastreamento)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> SEO para leigos: Como o Google lê o teu site.<br>
-                    • <strong>Aula 2:</strong> Usando a IA para escrever Meta Tags e Descrições que atraem cliques.<br>
-                    • <strong>Aula 3:</strong> Instalando o radar: Criando e conectando o Google Analytics e o Search Console.<br>
-                    • <strong>Aula 4:</strong> O básico para anúncios: Instalando o Meta Pixel no código do site.
-                </div>
-            </details>
+<section class="container" style="padding: 80px 24px; text-align: center; border-top: 1px solid #222; margin-top: 80px;">
+<h2 style="margin-bottom: 40px;">Dúvidas Frequentes</h2>
+<div style="max-width: 800px; margin: 0 auto; text-align: left;">
+<details><summary>Como e quando recebo o acesso?</summary><div class="faq-text">O acesso é imediato. Assim que o pagamento for confirmado, recebes automaticamente no teu e-mail os dados de acesso à plataforma da Hotmart, onde as aulas já estão libertadas.</div></details>
+<details><summary>Vou ter de pagar alojamento/servidor todos os meses?</summary><div class="faq-text">Não. O grande segredo deste método é ensinar-te a utilizar a infraestrutura de altíssima velocidade do GitHub Pages para alojar os teus sites profissionais a custo literalmente zero.</div></details>
+<details><summary>Nunca trabalhei com sites, vou conseguir?</summary><div class="faq-text">Sim. O curso foi desenhado assumindo que não sabes nada de código. Tu vais ser o "chefe" da IA. Só precisas de saber copiar os comandos (prompts) que eu te dou, e a IA fará o trabalho técnico pesado.</div></details>
+<details><summary>A IA faz o design visual ou só o texto?</summary><div class="faq-text">A IA faz ambos. Ela gera a estrutura visual em CSS e as marcações em HTML, deixando o site com um aspeto moderno, profissional e adaptado para telemóvel (responsivo).</div></details>
+</div>
+</section>
 
-            <details>
-                <summary>MÓDULO 6: O Nível Profissional (Hospedagem, Domínio e Dinamismo)</summary>
-                <div class="faq-text">
-                    • <strong>Aula 1:</strong> Quando é a hora certa de sair do GitHub Pages?<br>
-                    • <strong>Aula 2:</strong> Comprando o teu endereço na internet (Domínios .pt, .com, .com.br).<br>
-                    • <strong>Aula 3:</strong> Contratando um alojamento profissional (Custo-benefício).<br>
-                    • <strong>Aula 4:</strong> Apontando o domínio e subindo o site para o alojamento pago.<br>
-                    • <strong>Aula 5 (Avançada):</strong> Agora sim: Integrando um Blog dinâmico com PHP no alojamento.
-                </div>
-            </details>
-        </div>
-    </section>
+<footer class="text-center container">
+<p>© 2026 - Método IA Pro. Todos os direitos reservados.</p>
+<div style="margin-top: 10px; font-size: 0.85rem; color: #777;">
+Contacto: <span style="color:#9ca3af;">suporte@rbsf.site</span>
+</div>
+<div style="margin-top: 15px; font-size: 0.8rem;">
+<a href="privacidade.html">Privacidade</a> • <a href="termos.html">Termos</a>
+</div>
+<p style="margin-top: 30px; font-size: 0.7rem; color: #444; max-width: 800px; margin-inline: auto;">Este site não faz parte do site da Meta Inc. Além disso, este site NÃO é endossado pela Meta de nenhuma maneira. Os resultados podem variar de pessoa para pessoa. A venda de sites depende do teu esforço de prospeção na tua região.</p>
+</footer>
 
-    <section class="fit-section">
-        <div class="container">
-            <h2 class="text-center">Isto é para ti?</h2>
-            <div class="fit-grid">
-                <div class="fit-card fit-yes">
-                    <h3>✅ É para ti se...</h3>
-                    <ul>
-                        <li><span class="fit-icon">✓</span> Queres um site completo (várias páginas) para a tua empresa sem pagar fortunas.</li>
-                        <li><span class="fit-icon">✓</span> Procuras uma nova fonte de rendimento (vender sites por 500€+).</li>
-                        <li><span class="fit-icon">✓</span> Não sabes programar e precisas que a IA faça o trabalho técnico.</li>
-                        <li><span class="fit-icon">✓</span> Queres aprender a alojar sites profissionalmente a custo zero (GitHub).</li>
-                    </ul>
-                </div>
-                <div class="fit-card fit-no">
-                    <h3>❌ Não é para ti se...</h3>
-                    <ul>
-                        <li><span class="fit-icon">✕</span> Queres ficar rico a dormir sem aplicar o que aprendes.</li>
-                        <li><span class="fit-icon">✕</span> Queres ser programador backend tradicional (este curso é focado em ferramentas No-Code IA).</li>
-                        <li><span class="fit-icon">✕</span> Achas que criar um site não tem valor comercial.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="https://wa.me/34614604489" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<span>Dúvidas?</span>
+</a>
 
-    <section class="container">
-        <div class="urgency-block">
-            <h2>
-                A Inteligência Artificial já está a mudar o mercado.<br><br>
-                Podes <span style="color: var(--primary);">dominar esta ferramenta hoje</span> para faturares 500€ por projeto, ou arriscar <span style="color: var(--urgency-red);">ficar obsoleto amanhã</span> enquanto outros roubam o teu lugar.
-            </h2>
-            <p>DE QUE LADO QUERES ESTAR?</p>
-        </div>
-    </section>
+<script>
+// SCARCITY DATE SCRIPT
+function setUrgencyDate() {
+const dateElement = document.getElementById('dynamic-date');
+if (dateElement) {
+const today = new Date();
+const targetDate = new Date(today);
+targetDate.setDate(today.getDate() + 3);
+const day = String(targetDate.getDate()).padStart(2, '0');
+const month = String(targetDate.getMonth() + 1).padStart(2, '0');
+const year = targetDate.getFullYear();
+dateElement.innerText = `${day}/${month}/${year}`;
+}
+}
+setUrgencyDate();
 
-    <section class="container" style="margin-top: 20px;">
-        <div class="offer-box">
-            <h2 class="text-center" style="margin-bottom: 25px;">Tudo o que recebes hoje:</h2>
-            <div class="update-box">
-                <div class="pulse-dot"></div>
-                <div class="update-text"><strong>Conteúdo 100% Atualizado (2026)</strong><br><span style="font-size: 0.85rem;">Focado nas IAs de construção web mais recentes.</span></div>
-            </div>
-            
-            <ul class="check-list">
-                <li><span class="check-icon">✓</span> Formação: Cria Sites Completos com IA</li>
-                <li><span class="check-icon">✓</span> O Segredo do Alojamento Zero Custo</li>
-                <li><span class="check-icon">✓</span> Pack de Prompts Profissionais de Engenharia Web</li>
-                <li><span class="check-icon">🎁</span> Bónus: A Estratégia de "Agência de 1 Pessoa"</li>
-                <li><span class="check-icon">🎁</span> Acesso Vitalício + Atualizações Futuras</li>
-            </ul>
+// HIGH CONVERSION VSL TRIGGER (Reduz fricção, carrega e dá play)
+function loadYouTubeVideo() {
+if (window.__ytLoaded) return;
+window.__ytLoaded = true;
+const wrapper = document.getElementById('videoWrapper');
+const overlay = document.getElementById('videoConsent');
+if (overlay) overlay.style.display = 'none';
 
-            <div class="value-stack">
-                <div class="value-item"><span>📦 Curso Sites Completos IA</span> <span>197,00€</span></div>
-                <div class="value-item"><span>🎁 O Segredo do Alojamento a Zero Custo</span> <span>47,00€</span></div>
-                <div class="value-item"><span>🎁 Pack de Prompts Prontos</span> <span>39,00€</span></div>
-                <div class="value-item"><span>🎁 Bónus: Modelo de Vendas B2B</span> <span>97,00€</span></div>
-                <div class="value-total"><span>Valor Total:</span> <span class="strike-price">380,00€</span></div>
-            </div>
+const iframe = document.createElement('iframe');
+// Parâmetro autoplay=1 acionado pelo clique do utilizador
+iframe.src = "https://www.youtube-nocookie.com/embed/w-BooQsuQzY?autoplay=1&rel=0&modestbranding=1";
+iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+iframe.allowFullscreen = true;
+wrapper.appendChild(iframe);
 
-            <div class="text-center price-display">
-                <div class="price-new">49,90€</div>
-                <div class="price-sub">Pagamento Único • Acesso Vitalício Imediato</div>
-            </div>
-            
-            <div class="text-center">
-                <a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" 
-                   onclick="trackInitiateCheckout('Botao Oferta'); return false;" 
-                   class="btn-cta hotmart-fb" style="width: 100%;">
-                    Garantir o Meu Acesso Agora
-                </a>
-                
-                <div style="margin-top: 25px;">
-                    <p style="font-size: 0.85rem; color: #fff; margin-bottom: 10px;">Métodos de Pagamento Seguros:</p>
-                    <strong style="color: var(--primary); font-size: 0.9rem;">MB WAY • Multibanco • Cartão de Crédito • PayPal • Apple Pay</strong>
-                </div>
+// Ao clicar no vídeo, assume-se consentimento tácito para métricas
+localStorage.setItem('cookiesAccepted', 'true');
+loadTrackingScripts();
+}
 
-                <div style="margin-top: 25px; padding: 15px; background: rgba(0, 230, 118, 0.1); border: 1px dashed var(--primary); border-radius: 12px;">
-                    <p style="font-size: 1rem; color: #fff; font-weight: bold; margin-bottom: 5px;">🛡️ Risco Zero Absoluto</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Tens 14 Dias de Garantia Incondicional. O teu dinheiro de volta à distância de um clique.</p>
-                </div>
+// RASTREAMENTO E PIXELS (Background)
+function loadClarity() {
+if (window.__clarityLoaded) return;
+window.__clarityLoaded = true;
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "vkcwdeck54");
+}
 
-                <div style="margin-top: 20px; font-size: 0.75rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 5px;">
-                    <span>🛡️</span> Processamento e Segurança garantidos pela <b>Hotmart</b>
-                </div>
-            </div>
-        </div>
-    </section>
+function loadMetaPixel() {
+if (window.__pixelLoaded) return;
+window.__pixelLoaded = true;
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '940262381630522');
+fbq('track', 'PageView');
+}
 
-    <section class="container" style="padding: 80px 24px; text-align: center; border-top: 1px solid #222; margin-top: 80px;">
-        <h2 style="margin-bottom: 40px;">Perguntas Frequentes (FAQ)</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-            <details><summary>Como e quando recebo o acesso?</summary><div class="faq-text">O acesso é enviado imediatamente para o teu e-mail pela plataforma da Hotmart, assim que o pagamento for concluído.</div></details>
-            <details><summary>Vou ter de pagar alojamento/servidor todos os meses?</summary><div class="faq-text">Não. Dentro do curso, ensino a técnica exata para alojar os teus sites profissionais no GitHub Pages, garantindo velocidade e estabilidade a custo literalmente zero.</div></details>
-            <details><summary>Nunca trabalhei com sites, vou conseguir acompanhar?</summary><div class="faq-text">Sem dúvida. O método foi desenhado para quem tem Zero experiência. Não vamos ensinar a escrever código complexo; vamos ensinar-te a liderar a Inteligência Artificial para ela fazer o trabalho técnico por ti.</div></details>
-            <details><summary>Que tipos de site vou aprender a criar?</summary><div class="faq-text">Sites institucionais e multipágina para negócios. Páginas de Home, Sobre Nós, Ementas/Serviços, Galerias e Contactos. É exatamente o que os negócios locais (Clínicas, Restaurantes, Oficinas) mais procuram.</div></details>
-            <details><summary>Posso pedir reembolso se não me adaptar?</summary><div class="faq-text">Claro. Tens 14 dias de garantia incondicional. Se achares que o método não é para ti, devolvemos 100% do valor. Risco zero.</div></details>
-        </div>
-    </section>
+function loadUtmify() {
+if (window.__utmifyLoaded) return;
+window.__utmifyLoaded = true;
+var script = document.createElement('script');
+script.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+script.async = true; script.defer = true;
+document.head.appendChild(script);
+}
 
-    <footer class="text-center container">
-        <p>© 2026 - Método IA Pro. Todos os direitos reservados.</p>
-        <div style="margin-top: 10px; font-size: 0.85rem; color: #777;">
-            Contacto: <span style="color:#9ca3af;">suporte@rbsf.site</span>
-        </div>
-        <div style="margin-top: 15px; font-size: 0.8rem;">
-            <a href="privacidade.html">Privacidade</a> • <a href="termos.html">Termos</a>
-        </div>
-    </footer>
+function loadTrackingScripts() { 
+loadMetaPixel(); 
+loadClarity(); 
+loadUtmify(); 
+}
 
-    <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferências de cookies">
-        <h4 style="color: #fff; margin-bottom: 8px;">🍪 A tua privacidade</h4>
-        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 12px;">
-            Usamos cookies para medir o sucesso dos nossos anúncios e melhorar a tua experiência de navegação (Pixel, Clarity e ferramentas de análise).
-        </p>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="acceptCookies()" style="flex: 1; background: var(--primary); color: #000; border: none; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer;">Aceitar</button>
-            <button onclick="rejectCookies()" style="flex: 1; background: transparent; border: 1px solid #444; color: #fff; padding: 10px; border-radius: 8px; cursor: pointer;">Recusar</button>
-        </div>
-        <div class="cookie-links">
-            <a href="privacidade.html">Ler Política de Privacidade</a>
-        </div>
-    </div>
+function trackInitiateCheckout(origin) {
+try {
+if (typeof fbq !== 'undefined') {
+fbq('track', 'InitiateCheckout', { value: 49.90, currency: 'EUR', content_name: 'Curso Sites Completos IA', content_category: origin });
+}
+} catch (e) {}
+}
 
-    <a href="https://wa.me/34614604489" class="whatsapp-float" target="_blank">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Dúvidas?
-    </a>
+// Carrega os scripts automaticamente se o utilizador já aceitou no passado
+if (localStorage.getItem('cookiesAccepted') === 'true') {
+loadTrackingScripts();
+} else {
+// Carrega os scripts passado algum tempo ou no primeiro scroll forte para não perder dados do tráfego pago
+setTimeout(loadTrackingScripts, 5000); 
+}
+</script>
 
-    <script>
-        // SCRIPT DE DATA DINÂMICA
-        function setUrgencyDate() {
-            const dateElement = document.getElementById('dynamic-date');
-            if (dateElement) {
-                const today = new Date();
-                const targetDate = new Date(today);
-                targetDate.setDate(today.getDate() + 3);
-                const day = String(targetDate.getDate()).padStart(2, '0');
-                const month = String(targetDate.getMonth() + 1).padStart(2, '0');
-                const year = targetDate.getFullYear();
-                dateElement.innerText = `${day}/${month}/${year}`;
-            }
-        }
-        setUrgencyDate();
-
-        // CONSENT / TRACKING (RGPD SAFE)
-        function openCookieBanner() { document.getElementById('cookie-banner').style.display = 'block'; }
-        function closeCookieBanner() { document.getElementById('cookie-banner').style.display = 'none'; }
-
-        function loadClarity() {
-            if (window.__clarityLoaded) return;
-            window.__clarityLoaded = true;
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "vkcwdeck54");
-        }
-
-        function loadMetaPixel() {
-            if (window.__pixelLoaded) return;
-            window.__pixelLoaded = true;
-            !function(f,b,e,v,n,t,s){
-                if(f.fbq)return;
-                n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-                t=b.createElement(e);t.async=!0;t.src=v;
-                s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
-            }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '940262381630522');
-            fbq('track', 'PageView');
-        }
-
-        function loadUtmify() {
-            if (window.__utmifyLoaded) return;
-            window.__utmifyLoaded = true;
-            var script = document.createElement('script');
-            script.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-            script.async = true; script.defer = true;
-            document.head.appendChild(script);
-        }
-
-        function loadTrackingScripts() { loadMetaPixel(); loadClarity(); loadUtmify(); }
-
-        function loadYouTubeVideo() {
-            if (window.__ytLoaded) return;
-            window.__ytLoaded = true;
-            const wrapper = document.getElementById('videoWrapper');
-            const consentLayer = document.getElementById('videoConsent');
-            if (consentLayer) consentLayer.style.display = 'none';
-            const iframe = document.createElement('iframe');
-            iframe.loading = 'lazy';
-            iframe.src = "https://www.youtube-nocookie.com/embed/w-BooQsuQzY?rel=0&modestbranding=1";
-            iframe.title = "Demonstração Prática - Sites com IA";
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-            iframe.allowFullscreen = true;
-            wrapper.appendChild(iframe);
-        }
-
-        function acceptCookies() { 
-            localStorage.setItem('cookiesAccepted', 'true'); 
-            closeCookieBanner(); loadTrackingScripts(); loadYouTubeVideo();
-        }
-
-        function rejectCookies() { 
-            localStorage.setItem('cookiesAccepted', 'false'); 
-            closeCookieBanner(); 
-        }
-
-        function initConsent() {
-            const consent = localStorage.getItem('cookiesAccepted');
-            if (consent === 'true') { loadTrackingScripts(); loadYouTubeVideo(); } 
-            else if (consent !== 'false') { openCookieBanner(); }
-        }
-
-        function trackInitiateCheckout(origin) {
-            try {
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'InitiateCheckout', { 
-                        value: 49.90, currency: 'EUR', 
-                        content_name: 'Curso Sites Completos IA - PT', content_category: origin 
-                    });
-                }
-            } catch (e) {}
-        }
-
-        initConsent();
-    </script>
-
-    <script type="text/javascript">
-        function importHotmart(){ 
-            var imported = document.createElement('script'); 
-            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
-            document.head.appendChild(imported); 
-            var link = document.createElement('link'); 
-            link.rel = 'stylesheet'; 
-            link.type = 'text/css'; 
-            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
-            document.head.appendChild(link);    
-        } 
-        importHotmart(); 
-    </script>
-
+<script type="text/javascript">
+function importHotmart(){ 
+var imported = document.createElement('script'); 
+imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+document.head.appendChild(imported); 
+var link = document.createElement('link'); 
+link.rel = 'stylesheet'; 
+link.type = 'text/css'; 
+link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+document.head.appendChild(link); 
+} 
+importHotmart(); 
+</script>
 </body>
 </html>
