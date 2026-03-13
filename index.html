@@ -151,26 +151,12 @@
             padding: 22px;
             backdrop-filter: blur(6px);
         }
-        .video-consent-inner h3 {
-            font-size: 1.15rem;
-            margin-bottom: 10px;
-        }
-        .video-consent-inner p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 14px;
-        }
+        .video-consent-inner h3 { font-size: 1.15rem; margin-bottom: 10px; }
+        .video-consent-inner p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px; }
         .btn-secondary {
-            display: inline-block;
-            padding: 12px 16px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.18);
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-            background: rgba(255,255,255,0.06);
-            transition: 0.25s;
-            font-weight: 700;
+            display: inline-block; padding: 12px 16px; border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.18); color: #fff; text-decoration: none;
+            cursor: pointer; background: rgba(255,255,255,0.06); transition: 0.25s; font-weight: 700;
         }
         .btn-secondary:hover { transform: translateY(-2px); border-color: rgba(0,230,118,0.5); }
 
@@ -185,7 +171,6 @@
         .project-stats { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); }
         .stat-value { color: var(--primary); font-weight: bold; display: block; font-size: 1.1rem; }
 
-        /* --- SEÇÃO AUTOR & DEPOIMENTOS --- */
         .author-box { background: rgba(0, 230, 118, 0.05); border: 1px solid rgba(0, 230, 118, 0.2); border-radius: 16px; padding: 40px; margin: 60px auto; max-width: 800px; display: flex; align-items: center; gap: 30px; }
         .author-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); background: #222; }
         .author-text h3 { color: #fff; margin-bottom: 10px; font-size: 1.5rem; }
@@ -201,7 +186,6 @@
         .test-name { font-weight: 600; font-size: 0.9rem; color: #fff; }
         .test-role { font-size: 0.8rem; color: var(--text-muted); }
 
-        /* --- PARA QUEM É / NÃO É --- */
         .fit-section { padding: 70px 0; border-top: 1px solid #222; background: #050505; }
         .fit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 28px; }
         .fit-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; }
@@ -213,32 +197,10 @@
         .fit-yes .fit-icon { color: var(--primary); }
         .fit-no .fit-icon { color: var(--urgency-red); }
 
-        /* --- GATILHO DE URGÊNCIA (NOVO BLOCO) --- */
-        .urgency-block {
-            background: rgba(255, 71, 87, 0.05);
-            border: 1px solid rgba(255, 71, 87, 0.25);
-            border-radius: 16px;
-            padding: 40px 30px;
-            margin: 60px auto 0;
-            max-width: 850px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(255, 71, 87, 0.08);
-        }
-        .urgency-block h2 {
-            font-size: 1.7rem;
-            line-height: 1.4;
-            color: #fff;
-        }
-        .urgency-block p {
-            font-size: 1.2rem;
-            margin-top: 20px;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .urgency-block { background: rgba(255, 71, 87, 0.05); border: 1px solid rgba(255, 71, 87, 0.25); border-radius: 16px; padding: 40px 30px; margin: 60px auto 0; max-width: 850px; text-align: center; box-shadow: 0 10px 40px rgba(255, 71, 87, 0.08); }
+        .urgency-block h2 { font-size: 1.7rem; line-height: 1.4; color: #fff; }
+        .urgency-block p { font-size: 1.2rem; margin-top: 20px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
-        /* --- ANCORAGEM DE PREÇO --- */
         .value-stack { background: rgba(255,255,255,0.02); border-radius: 12px; padding: 24px; margin: 30px 0; border: 1px dashed rgba(255,255,255,0.1); }
         .value-item { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 1rem; color: #ddd; align-items: center; }
         .value-item:last-of-type { border-bottom: 1px solid #333; padding-bottom: 14px; }
@@ -249,12 +211,6 @@
         .update-box { background: rgba(255, 215, 0, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 16px; border-radius: 12px; margin-bottom: 25px; text-align: left; display: flex; gap: 15px; align-items: center; }
         .pulse-dot { min-width: 12px; height: 12px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 rgba(255, 215, 0, 0.4); animation: pulse-gold 2s infinite; }
         
-        @keyframes pulse-gold {
-            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6); }
-            70% { box-shadow: 0 0 0 14px rgba(255, 215, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
-        }
-
         .check-list { list-style: none; margin: 30px 0; }
         .check-list li { margin-bottom: 15px; font-size: 1.05rem; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; text-align: left; }
         .check-icon { color: var(--primary); min-width: 20px; font-weight: bold; }
@@ -274,9 +230,18 @@
         footer a { color: #888; text-decoration: none; margin: 0 10px; transition: 0.3s; }
 
         #cookie-banner { position: fixed; bottom: 20px; left: 20px; max-width: 360px; background: #111; border: 1px solid #333; padding: 18px; border-radius: 12px; z-index: 9999; box-shadow: 0 10px 40px rgba(0,0,0,0.8); display: none; }
-
         .cookie-links { margin-top: 10px; font-size: 0.8rem; color: #888; }
         .cookie-links a { color: #9ca3af; text-decoration: none; }
+
+        /* --- WHATSAPP FLUTUANTE (NOVO) --- */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: #25d366; color: white; border-radius: 50px;
+            padding: 12px 20px; font-weight: bold; display: flex; align-items: center; gap: 10px;
+            text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000; transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
@@ -288,6 +253,7 @@
             .author-box { flex-direction: column; text-align: center; padding: 30px 20px; }
             .top-banner { position: relative; }
             .urgency-block h2 { font-size: 1.3rem; }
+            #cookie-banner { bottom: 85px; } /* Evita sobrepor o botão do Whats */
         }
     </style>
 </head>
@@ -320,12 +286,15 @@
         </div>
 
         <div>
-            <a href="https://pay.hotmart.com/A104792682R?off=bofongfl" 
-               onclick="trackInitiateCheckout('Botao Hero')" 
-               class="btn-cta">
+            <a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" 
+               onclick="trackInitiateCheckout('Botao Hero'); return false;" 
+               class="btn-cta hotmart-fb">
                 Garantir o Meu Acesso Imediato
             </a>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">🔒 Pagamento Seguro • Garantia Incondicional de 14 Dias</p>
+            
+            <div style="margin-top: 15px; font-size: 0.95rem; color: #FFD700; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+            <p style="margin-top: 5px; font-size: 0.95rem; color: #fff; font-weight: 500;">Mais de 300+ alunos já criaram os seus sites</p>
+            
             <p style="margin-top: 8px; font-size: 0.78rem; color: #666;">*O valor de revenda depende dos clientes angariados na tua região.</p>
         </div>
     </header>
@@ -577,15 +546,22 @@
             </div>
             
             <div class="text-center">
-                <a href="https://pay.hotmart.com/A104792682R?off=bofongfl" 
-                   onclick="trackInitiateCheckout('Botao Oferta')" 
-                   class="btn-cta" style="width: 100%;">
+                <a href="https://pay.hotmart.com/A104792682R?off=bofongfl&checkoutMode=2" 
+                   onclick="trackInitiateCheckout('Botao Oferta'); return false;" 
+                   class="btn-cta hotmart-fb" style="width: 100%;">
                     Garantir o Meu Acesso Agora
                 </a>
+                
                 <div style="margin-top: 25px;">
                     <p style="font-size: 0.85rem; color: #fff; margin-bottom: 10px;">Métodos de Pagamento Seguros:</p>
                     <strong style="color: var(--primary); font-size: 0.9rem;">MB WAY • Multibanco • Cartão de Crédito • PayPal • Apple Pay</strong>
                 </div>
+
+                <div style="margin-top: 25px; padding: 15px; background: rgba(0, 230, 118, 0.1); border: 1px dashed var(--primary); border-radius: 12px;">
+                    <p style="font-size: 1rem; color: #fff; font-weight: bold; margin-bottom: 5px;">🛡️ Risco Zero Absoluto</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Tens 14 Dias de Garantia Incondicional. O teu dinheiro de volta à distância de um clique.</p>
+                </div>
+
                 <div style="margin-top: 20px; font-size: 0.75rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 5px;">
                     <span>🛡️</span> Processamento e Segurança garantidos pela <b>Hotmart</b>
                 </div>
@@ -628,41 +604,34 @@
         </div>
     </div>
 
+    <a href="https://wa.me/351999999999" class="whatsapp-float" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Dúvidas?
+    </a>
+
     <script>
-        // -------------------------------
         // SCRIPT DE DATA DINÂMICA
-        // -------------------------------
         function setUrgencyDate() {
             const dateElement = document.getElementById('dynamic-date');
             if (dateElement) {
                 const today = new Date();
                 const targetDate = new Date(today);
                 targetDate.setDate(today.getDate() + 3);
-
                 const day = String(targetDate.getDate()).padStart(2, '0');
                 const month = String(targetDate.getMonth() + 1).padStart(2, '0');
                 const year = targetDate.getFullYear();
-
                 dateElement.innerText = `${day}/${month}/${year}`;
             }
         }
         setUrgencyDate();
 
-        // -------------------------------
         // CONSENT / TRACKING (RGPD SAFE)
-        // -------------------------------
-
-        function openCookieBanner() { 
-            document.getElementById('cookie-banner').style.display = 'block'; 
-        }
-        function closeCookieBanner() { 
-            document.getElementById('cookie-banner').style.display = 'none'; 
-        }
+        function openCookieBanner() { document.getElementById('cookie-banner').style.display = 'block'; }
+        function closeCookieBanner() { document.getElementById('cookie-banner').style.display = 'none'; }
 
         function loadClarity() {
             if (window.__clarityLoaded) return;
             window.__clarityLoaded = true;
-
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -673,19 +642,13 @@
         function loadMetaPixel() {
             if (window.__pixelLoaded) return;
             window.__pixelLoaded = true;
-
             !function(f,b,e,v,n,t,s){
                 if(f.fbq)return;
                 n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;
-                n.push=n;
-                n.loaded=!0;
-                n.version='2.0';
-                n.queue=[];
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
                 t=b.createElement(e);t.async=!0;t.src=v;
                 s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
             }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
             fbq('init', '940262381630522');
             fbq('track', 'PageView');
         }
@@ -693,44 +656,32 @@
         function loadUtmify() {
             if (window.__utmifyLoaded) return;
             window.__utmifyLoaded = true;
-
             var script = document.createElement('script');
             script.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-            script.async = true; 
-            script.defer = true;
+            script.async = true; script.defer = true;
             document.head.appendChild(script);
         }
 
-        function loadTrackingScripts() {
-            loadMetaPixel();
-            loadClarity();
-            loadUtmify();
-        }
+        function loadTrackingScripts() { loadMetaPixel(); loadClarity(); loadUtmify(); }
 
         function loadYouTubeVideo() {
             if (window.__ytLoaded) return;
             window.__ytLoaded = true;
-
             const wrapper = document.getElementById('videoWrapper');
             const consentLayer = document.getElementById('videoConsent');
-
             if (consentLayer) consentLayer.style.display = 'none';
-
             const iframe = document.createElement('iframe');
             iframe.loading = 'lazy';
             iframe.src = "https://www.youtube-nocookie.com/embed/w-BooQsuQzY?rel=0&modestbranding=1";
             iframe.title = "Demonstração Prática - Sites com IA";
             iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
             iframe.allowFullscreen = true;
-
             wrapper.appendChild(iframe);
         }
 
         function acceptCookies() { 
             localStorage.setItem('cookiesAccepted', 'true'); 
-            closeCookieBanner(); 
-            loadTrackingScripts(); 
-            loadYouTubeVideo();
+            closeCookieBanner(); loadTrackingScripts(); loadYouTubeVideo();
         }
 
         function rejectCookies() { 
@@ -740,25 +691,16 @@
 
         function initConsent() {
             const consent = localStorage.getItem('cookiesAccepted');
-            if (consent === 'true') {
-                loadTrackingScripts();
-                loadYouTubeVideo();
-            } else if (consent !== 'false') {
-                openCookieBanner();
-            }
+            if (consent === 'true') { loadTrackingScripts(); loadYouTubeVideo(); } 
+            else if (consent !== 'false') { openCookieBanner(); }
         }
 
-        // ==========================================
-        // ATENÇÃO: SCRIPT DO PIXEL ATUALIZADO (49.90)
-        // ==========================================
         function trackInitiateCheckout(origin) {
             try {
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'InitiateCheckout', { 
-                        value: 49.90, 
-                        currency: 'EUR', 
-                        content_name: 'Curso Sites Completos IA - PT', 
-                        content_category: origin 
+                        value: 49.90, currency: 'EUR', 
+                        content_name: 'Curso Sites Completos IA - PT', content_category: origin 
                     });
                 }
             } catch (e) {}
@@ -766,5 +708,20 @@
 
         initConsent();
     </script>
+
+    <script type="text/javascript">
+        function importHotmart(){ 
+            var imported = document.createElement('script'); 
+            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+            document.head.appendChild(imported); 
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet'; 
+            link.type = 'text/css'; 
+            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+            document.head.appendChild(link);    
+        } 
+        importHotmart(); 
+    </script>
+
 </body>
 </html>
