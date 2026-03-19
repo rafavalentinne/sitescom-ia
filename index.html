@@ -61,32 +61,41 @@
         .agitation-list { list-style: none; margin-top: 15px; }
         .agitation-list li { margin-bottom: 10px; display: flex; gap: 10px; color: #ddd; }
 
-        /* Video Section - NO FAKE BUTTONS */
+        /* Video Section - SEM BOTÕES FALSOS */
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; max-width: 850px; margin: 30px auto; border-radius: 16px; overflow: hidden; border: 2px solid var(--primary); background: #000; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        /* Projects & Cards */
+        /* Projects */
         .grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; padding: 20px; }
+        .project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); padding: 20px; transition: 0.3s; }
+        .project-card:hover { border-color: var(--primary); }
         .project-stats { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; margin-top: 15px; }
         .stat-value { color: var(--primary); font-weight: 900; }
 
-        /* Author & Fit */
-        .author-box { background: rgba(0, 230, 118, 0.05); border: 1px dashed var(--primary); border-radius: 16px; padding: 40px; margin: 60px auto; max-width: 800px; display: flex; align-items: center; gap: 30px; }
-        .author-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--primary); }
-
         /* Modules */
-        details { background: rgba(255,255,255,0.03); border: 1px solid #222; border-radius: 10px; margin-bottom: 10px; padding: 15px; }
-        summary { cursor: pointer; font-weight: 600; color: #fff; list-style: none; display: flex; justify-content: space-between; }
-        .faq-text { padding-top: 15px; color: var(--text-muted); font-size: 0.95rem; }
+        .modules-section { background: #0a0a0a; padding: 60px 0; border-radius: 30px; margin-top: 40px; }
+        details { background: rgba(255,255,255,0.03); border: 1px solid #222; border-radius: 10px; margin-bottom: 12px; padding: 18px; }
+        summary { cursor: pointer; font-weight: 700; color: #fff; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+        summary::after { content: '→'; color: var(--primary); }
+        .faq-text { padding-top: 15px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; }
+
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
+        .test-card { background: #111; padding: 30px; border-radius: 16px; border: 1px solid #222; }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* Author */
+        .author-box { background: rgba(0, 230, 118, 0.05); border: 1px dashed var(--primary); border-radius: 16px; padding: 40px; margin: 60px auto; max-width: 800px; display: flex; align-items: center; gap: 30px; }
+        .author-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--primary); object-fit: cover; }
 
         /* Offer Box */
-        .offer-box { background: #0f0f0f; border: 2px solid var(--primary); border-radius: 24px; padding: 50px; margin: 40px auto; max-width: 800px; text-align: center; }
-        .price-new { font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1; }
-        .strike-price { text-decoration: line-through; color: var(--urgency-red); font-size: 1.2rem; }
+        .offer-box { background: radial-gradient(circle at center, #151515 0%, #050505 100%); border: 2px solid var(--primary); border-radius: 24px; padding: 50px; margin: 40px auto; max-width: 850px; text-align: center; position: relative; }
+        .price-new { font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1; margin: 20px 0; }
+        .strike-price { text-decoration: line-through; color: var(--urgency-red); font-size: 1.4rem; font-weight: 700; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.3rem; }
+            .price-new { font-size: 3.5rem; }
             .author-box { flex-direction: column; text-align: center; }
         }
     </style>
@@ -94,7 +103,7 @@
 <body>
 
     <div class="top-banner">
-        ⚠️ ATENÇÃO: Lote Promocional por Tempo Limitado!
+        ⚠️ ATENÇÃO: LOTE PROMOCIONAL POR TEMPO LIMITADO!
     </div>
 
     <header class="hero container">
@@ -103,22 +112,22 @@
         <p>Aprenda a gerar a estrutura, o texto e o design de sites multipágina usando apenas Inteligência Artificial. <strong>Crie para sua empresa ou venda para clientes por R$ 1.500+.</strong></p>
 
         <div class="agitation-box">
-            <h3>Por que continuar perdendo dinheiro?</h3>
+            <h3 class="text-center">Por que continuar perdendo dinheiro?</h3>
             <ul class="agitation-list">
                 <li>❌ Pagar R$ 3.000 para agências por sites simples.</li>
-                <li>❌ Pagar R$ 100/mês de hospedagem para sempre no Wix.</li>
+                <li>❌ Pagar R$ 100/mês de hospedagem para sempre no Wix ou WordPress.</li>
                 <li>❌ Perder semanas tentando aprender a programar do zero.</li>
             </ul>
         </div>
 
         <div class="profit-math">
-            <div class="math-item"><span>Hospedagem</span><strong>R$ 0,00</strong></div>
+            <div class="math-item"><span>Custo de Hospedagem</span><strong>R$ 0,00</strong></div>
             <div class="math-item"><span>Potencial de Venda</span><strong>R$ 1.500+</strong></div>
-            <div class="math-item"><span>Nível</span><strong>Iniciante</strong></div>
+            <div class="math-item"><span>Nível Exigido</span><strong>Iniciante</strong></div>
         </div>
 
         <a href="https://pay.kirvano.com/3d6a548b-d4c5-49f3-b6de-5e6021447d4e" class="btn-cta">QUERO ACESSAR O MÉTODO AGORA 👉</a>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #666;">🔒 Acesso imediato após o PIX ou Cartão.</p>
+        <p style="margin-top: 15px; color: #aaa; font-size: 0.85rem;">🔒 Acesso imediato via E-mail • Pagamento Seguro</p>
     </header>
 
     <section class="container text-center">
@@ -128,18 +137,18 @@
         </div>
     </section>
 
-    <section class="container" style="padding: 60px 0;">
+    <section class="container" style="padding: 80px 0;">
         <h2 class="text-center">O que você será capaz de criar:</h2>
         <div class="grid-projects">
             <div class="project-card">
-                <h3>Site: Barbearia Profissional</h3>
+                <h3>Site: Barbearia & Estilo</h3>
                 <div class="project-stats">
                     <span>5 Páginas</span>
                     <span class="stat-value">Venda: R$ 1.500</span>
                 </div>
             </div>
             <div class="project-card">
-                <h3>Site: Restaurantes / Delivery</h3>
+                <h3>Site: Restaurantes & Delivery</h3>
                 <div class="project-stats">
                     <span>Cardápio Digital</span>
                     <span class="stat-value">Venda: R$ 2.000</span>
@@ -155,28 +164,48 @@
         </div>
     </section>
 
-    <section class="container" style="background: #0a0a0a; padding: 40px; border-radius: 20px;">
-        <h2 class="text-center" style="margin-bottom: 30px;">Conteúdo do Curso (Acesso Vitalício)</h2>
-        <details>
-            <summary>MÓDULO 1: O Ponto de Partida</summary>
-            <div class="faq-text">• Anatomia de um site profissional<br>• Ferramentas de IA Gratuitas</div>
-        </details>
-        <details>
-            <summary>MÓDULO 2: O Arquiteto de IA</summary>
-            <div class="faq-text">• Prompts Mestres para estrutura completa<br>• Gerando HTML/CSS sem digitar uma linha</div>
-        </details>
-        <details>
-            <summary>MÓDULO 3: Hospedagem Zero Custo</summary>
-            <div class="faq-text">• Configurando o GitHub Pages<br>• Site no ar em 5 minutos com certificado SSL</div>
-        </details>
-        <details>
-            <summary>MÓDULO 4: Funcionalidades Pro</summary>
-            <div class="faq-text">• Formulários de contato direto no seu e-mail<br>• Botão de WhatsApp Flutuante</div>
-        </details>
-        <details>
-            <summary>MÓDULO 5: SEO e Rastreamento</summary>
-            <div class="faq-text">• Como aparecer no Google<br>• Instalando o Pixel para anúncios</div>
-        </details>
+    <section class="modules-section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 10px;">Conteúdo do Curso (Acesso Vitalício)</h2>
+            <p class="text-center" style="color: var(--text-muted); margin-bottom: 40px;">Do zero à publicação, sem esconder nada.</p>
+            
+            <details>
+                <summary>MÓDULO 1: O Ponto de Partida</summary>
+                <div class="faq-text">• Landing Page vs Site Completo<br>• Anatomia de um site profissional<br>• Ferramentas de IA Gratuitas</div>
+            </details>
+            <details>
+                <summary>MÓDULO 2: O Arquiteto de IA</summary>
+                <div class="faq-text">• Prompts Mestres para estrutura completa<br>• Gerando HTML/CSS sem digitar código<br>• Logotipos com IA</div>
+            </details>
+            <details>
+                <summary>MÓDULO 3: Hospedagem Zero Custo</summary>
+                <div class="faq-text">• Configurando o GitHub Pages<br>• Site no ar em minutos com SSL (Segurança)</div>
+            </details>
+            <details>
+                <summary>MÓDULO 4: Funcionalidades Pro</summary>
+                <div class="faq-text">• Formulários de contato direto no seu e-mail<br>• Botão de WhatsApp Flutuante</div>
+            </details>
+            <details>
+                <summary>MÓDULO 5: SEO e Rastreamento</summary>
+                <div class="faq-text">• Como aparecer no Google<br>• Instalando o Pixel para anúncios</div>
+            </details>
+        </div>
+    </section>
+
+    <section class="container testimonial-section" style="padding: 80px 0;">
+        <h2 class="text-center">Quem já está aplicando:</h2>
+        <div class="testimonial-grid">
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"Sempre me pediram R$ 3.000 por um site. Com a IA, eu mesma criei tudo em um final de semana."</p>
+                <strong>Juliana M., São Paulo</strong>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p>"Nunca programei. Segui o passo a passo e vendi meu primeiro site por R$ 1.800 na primeira semana."</p>
+                <strong>Carlos S., Curitiba</strong>
+            </div>
+        </div>
     </section>
 
     <section class="container">
@@ -184,42 +213,41 @@
             <img src="rafael.png" class="author-img" alt="Rafael Barros">
             <div>
                 <h3>Com quem você vai aprender?</h3>
-                <p>Sou o <strong>Rafael Barros</strong>, desenvolvedor Full Stack. Criei este método para que qualquer pessoa possa usar a IA para lucrar, sem precisar estudar código por anos. Vou te entregar o "mapa da mina" validado.</p>
+                <p>Sou o <strong>Rafael Barros</strong>, desenvolvedor Full Stack. Criei este método para que qualquer pessoa possa usar a IA para lucrar, sem precisar estudar código por anos. Vou te entregar o processo validado.</p>
             </div>
         </div>
     </section>
 
     <section class="container" id="oferta">
         <div class="offer-box">
-            <span style="color: var(--gold); font-weight: 800;">OFERTA DE LANÇAMENTO BRASIL</span>
-            <h2 style="margin: 20px 0;">Tudo isso por apenas:</h2>
+            <span style="color: var(--gold); font-weight: 800; letter-spacing: 2px;">OFERTA DE LANÇAMENTO BRASIL</span>
+            <h2 style="margin: 25px 0;">Libere seu acesso agora por apenas:</h2>
             <div class="strike-price">De R$ 197,00</div>
             <div class="price-new">R$ 29,90</div>
-            <p style="margin-bottom: 30px; color: #aaa;">Pagamento Único • Sem Mensalidades</p>
-            <a href="https://pay.kirvano.com/3d6a548b-d4c5-49f3-b6de-5e6021447d4e" class="btn-cta">QUERO MINHA VAGA AGORA 👉</a>
+            <p style="margin-bottom: 30px; color: #aaa;">Pagamento Único • Sem Mensalidades • Acesso Vitalício</p>
+            <a href="https://pay.kirvano.com/3d6a548b-d4c5-49f3-b6de-5e6021447d4e" class="btn-cta">GARANTIR MINHA VAGA AGORA 👉</a>
             
-            <div style="margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 15px;">
-                <span>🛡️ 7 Dias de Garantia</span>
+            <div style="margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 15px; font-weight: bold; color: var(--primary);">
+                <span>🛡️ 7 Dias de Garantia Total</span>
             </div>
         </div>
     </section>
 
-    <footer class="text-center container" style="padding: 40px 0; color: #555; font-size: 0.9rem;">
+    <footer class="text-center container" style="padding: 60px 0; color: #555; font-size: 0.9rem; border-top: 1px solid #111;">
         <p>© 2026 - Método IA Pro. Todos os direitos reservados.</p>
-        <div style="margin-top: 10px;">
-            <a href="privacidade.html" style="color: #555;">Privacidade</a> | <a href="termos.html" style="color: #555;">Termos</a>
+        <div style="margin-top: 15px;">
+            <a href="privacidade.html" style="color: #555;">Privacidade</a> | <a href="termos.html" style="color: #555;">Termos de Uso</a>
         </div>
     </footer>
 
     <script>
-        // Rastreamento Direto e Transparente para o Facebook
+        // Rastreamento Transparente (Melhor para aprovação)
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '605285899070341');
         fbq('track', 'PageView');
 
-        function trackInitiateCheckout() {
-            fbq('track', 'InitiateCheckout', { value: 29.90, currency: 'BRL' });
-        }
+        // Clarity
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/vkcwdeck54";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "vkcwdeck54");
     </script>
 </body>
 </html>
