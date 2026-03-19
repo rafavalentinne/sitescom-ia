@@ -118,6 +118,36 @@
         .test-author { display: flex; align-items: center; gap: 15px; border-top: 1px solid #222; padding-top: 15px; }
         .test-avatar { width: 50px; height: 50px; border-radius: 50%; background: rgba(0,230,118,0.1); border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary); }
 
+        /* --- NOVOS BLOCOS (AUTOR, MÓDULOS, PARA QUEM É, URGÊNCIA) --- */
+        .author-box { background: rgba(0, 230, 118, 0.05); border: 1px dashed var(--primary); border-radius: 16px; padding: 40px; margin: 60px auto; max-width: 800px; display: flex; align-items: center; gap: 30px; }
+        .author-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); background: #222; }
+        .author-text h3 { color: #fff; margin-bottom: 10px; font-size: 1.5rem; }
+        .author-text p { color: var(--text-muted); line-height: 1.6; font-size: 1.05rem; text-align: left; }
+        
+        .fit-section { padding: 70px 24px; border-top: 1px solid #222; background: #050505; margin-top: 60px; }
+        .fit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 28px auto 0; }
+        .fit-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; text-align: left; }
+        .fit-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #fff;}
+        .fit-card ul { list-style: none; margin-top: 12px; }
+        .fit-card li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: #ddd; }
+        .fit-card li:last-child { border-bottom: none; }
+        .fit-icon { min-width: 18px; font-weight: 900; }
+        .fit-yes .fit-icon { color: var(--primary); }
+        .fit-no .fit-icon { color: var(--urgency-red); }
+
+        .urgency-block {
+            background: rgba(255, 71, 87, 0.05);
+            border: 1px dashed rgba(255, 71, 87, 0.3);
+            border-radius: 16px;
+            padding: 40px 30px;
+            margin: 60px auto 40px;
+            max-width: 850px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(255, 71, 87, 0.08);
+        }
+        .urgency-block h2 { font-size: 1.7rem; line-height: 1.4; color: #fff; }
+        .urgency-block p { font-size: 1.2rem; margin-top: 20px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
         /* Oferta Irresistível */
         .offer-box { background: radial-gradient(circle at center, #151515 0%, #050505 100%); border: 2px solid var(--primary); box-shadow: 0 0 50px rgba(0,230,118,0.15); border-radius: 24px; padding: 50px; margin: 40px auto 0; max-width: 800px; position: relative; }
         .tag-desconto { position: absolute; top: -20px; right: 30px; background: var(--urgency-red); color: #fff; font-weight: 900; padding: 10px 20px; border-radius: 50px; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(255, 59, 48, 0.4); }
@@ -158,6 +188,8 @@
             .guarantee-box { flex-direction: column; text-align: center; }
             .whatsapp-float span { display: none; }
             .whatsapp-float { padding: 15px; border-radius: 50%; }
+            .author-box { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .urgency-block h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -273,6 +305,103 @@
         </div>
     </section>
 
+    <section class="container">
+        <div class="author-box">
+            <img loading="lazy" width="240" height="240" src="rafael.png" alt="Rafael Barros" class="author-img">
+            <div class="author-text">
+                <h3>Com quem vais aprender?</h3>
+                <p>Sou o <strong>Rafael Barros</strong>, Desenvolvedor Full Stack. Criei este método para que qualquer pessoa possa usar a Inteligência Artificial para lucrar, sem ter de estudar código complexo durante anos. A minha missão é entregar-te um processo validado para colocares a tua página no ar hoje mesmo, de forma segura e profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 40px 24px; background: #0a0a0a; border-radius: 16px; margin: 0 auto; border: 1px solid #222; max-width: 900px;">
+        <h2 class="text-center" style="margin-bottom: 10px;">Conteúdo do Curso (Acesso Vitalício)</h2>
+        <p class="text-center" style="color: var(--text-muted); margin-bottom: 30px;">
+            O mapa completo: do zero à publicação do teu site multipágina, sem esconder nada.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <details>
+                <summary>MÓDULO 1 – O Ponto de Partida</summary>
+                <div class="faq-text">
+                    • A grande diferença: Landing Page vs Site Completo.<br>
+                    • A anatomia de um site profissional.<br>
+                    • As ferramentas de trabalho (Navegador e IAs).
+                </div>
+            </details>
+            <details>
+                <summary>MÓDULO 2 – O Arquiteto de IA (A Construção)</summary>
+                <div class="faq-text">
+                    • O Prompt Mestre: Criando a estrutura em segundos.<br>
+                    • Gerando o "Esqueleto" visual (Copiando e colando).<br>
+                    • A Reforma: Personalizando Cores e Textos.<br>
+                    • Como inserir Imagens reais e Logótipos.<br>
+                    • Inserir link direto para o teu WhatsApp.
+                </div>
+            </details>
+            <details>
+                <summary>MÓDULO 3 – O Alicerce Gratuito (GitHub Pages)</summary>
+                <div class="faq-text">
+                    • Criando conta no GitHub (Para não-programadores).<br>
+                    • Subindo os ficheiros do site de forma segura.<br>
+                    • O teu site no ar com certificado de segurança (SSL) gratuito.
+                </div>
+            </details>
+            <details>
+                <summary>MÓDULO 4 – O Motor do Site (Interatividade)</summary>
+                <div class="faq-text">
+                    • Inserir formulários funcionais para captar clientes.<br>
+                    • Criar links de agendamentos e mapas de localização.<br>
+                    • Adicionar botões flutuantes para contacto rápido.
+                </div>
+            </details>
+            <details>
+                <summary>MÓDULO 5 – Domínio Profissional e SEO</summary>
+                <div class="faq-text">
+                    • Como comprar o teu endereço na internet (.pt, .com).<br>
+                    • Ligar o domínio ao teu alojamento gratuito.<br>
+                    • Instalar o Google Analytics e o Pixel do Facebook.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="fit-section">
+        <div class="container">
+            <h2 class="text-center">Isto é para ti?</h2>
+            <div class="fit-grid">
+                <div class="fit-card fit-yes">
+                    <h3>✅ É para ti se...</h3>
+                    <ul>
+                        <li><span class="fit-icon">✓</span> Queres criar um site completo para a tua empresa sem pagar 1.500€ a agências.</li>
+                        <li><span class="fit-icon">✓</span> Queres vender sites a negócios locais (restaurantes, clínicas) por 500€+.</li>
+                        <li><span class="fit-icon">✓</span> Preferes um método simples: “copiar e colar” os comandos da IA.</li>
+                        <li><span class="fit-icon">✓</span> Recusas pagar 20€/mês de alojamento de servidor para sempre.</li>
+                    </ul>
+                </div>
+                <div class="fit-card fit-no">
+                    <h3>❌ Não é para ti se...</h3>
+                    <ul>
+                        <li><span class="fit-icon">✕</span> Queres "dinheiro fácil" sem seguir as aulas e aplicar.</li>
+                        <li><span class="fit-icon">✕</span> Procuras um curso exaustivo para ser engenheiro de software.</li>
+                        <li><span class="fit-icon">✕</span> Não queres dedicar algumas horas para personalizar os textos do site.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="urgency-block">
+            <h2>
+                A Inteligência Artificial já está a mudar o mercado.<br><br>
+                Podes <span style="color: var(--primary);">dominar esta ferramenta hoje</span> para construíres ativos valiosos e venderes projetos a 500€, ou arriscar <span style="color: var(--urgency-red);">ficar obsoleto amanhã</span>.
+            </h2>
+            <p>De que lado queres estar?</p>
+        </div>
+    </section>
+
     <section class="container" id="oferta">
         <div class="offer-box">
             <div class="tag-desconto">⚡ PREÇO ESPECIAL HOJE</div>
@@ -314,6 +443,7 @@
         <div style="max-width: 800px; margin: 0 auto; text-align: left;">
             <details><summary>Como recebo o acesso?</summary><div class="faq-text">O acesso é imediato via e-mail pela plataforma Hotmart.</div></details>
             <details><summary>Vou pagar alojamento mensal?</summary><div class="faq-text">Não. Ensinamos a usar o GitHub Pages para alojar sites a custo zero.</div></details>
+            <details><summary>Preciso pagar a versão Plus do ChatGPT?</summary><div class="faq-text">Não. Todo o método foi validado utilizando apenas ferramentas e IAs gratuitas.</div></details>
         </div>
         
         <div style="margin-top: 50px; text-align: center;">
